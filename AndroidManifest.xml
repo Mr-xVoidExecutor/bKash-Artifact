@@ -2,7 +2,7 @@
 <manifest
     android:compileSdkVersion="36"
     android:compileSdkVersionCodename="16"
-    package="com.bKash.customerapp"
+    package="com.bKash.myapp"
     platformBuildVersionCode="36"
     platformBuildVersionName="16"
     xmlns:android="http://schemas.android.com/apk/res/android">
