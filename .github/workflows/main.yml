@@ -24,7 +24,9 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
       with:
-        accept-android-sdk-licenses: true # <-- এই লাইনটি লাইসেন্স অটো-অ্যাকসেপ্ট করে নেবে
+        accept-android-sdk-licenses: true
+        # নিচের লাইনগুলোর মাধ্যমে শুধু প্রয়োজনীয় আধুনিক কম্পোনেন্টগুলো ইনস্টল হবে, ফলে 'tools' প্যাকেজ খোঁজার এররটি আর আসবে না
+        packages: 'platforms;android-34 build-tools;34.0.0 platform-tools'
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
