@@ -5,7 +5,7 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
-  workflow_dispatch: # এটি দিলে GitHub-এর Actions ট্যাব থেকে সরাসরি 'Run workflow' বাটন পাওয়া যাবে
+  workflow_dispatch:
 
 jobs:
   build:
@@ -23,6 +23,8 @@ jobs:
 
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
+      with:
+        accept-android-sdk-licenses: true # <-- এই লাইনটি লাইসেন্স অটো-অ্যাকসেপ্ট করে নেবে
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
