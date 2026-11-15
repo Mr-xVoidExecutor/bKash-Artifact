@@ -19,13 +19,22 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Install Apktool and Build APK
+    - name: Create missing apktool.yml and Build APK
       run: |
-        # Apktool ডাউনলোড এবং ইনস্টল করা
         sudo apt-get update
         sudo apt-get install -y apktool
 
-        # বর্তমান ফোল্ডারের সোর্স দিয়ে APK বিল্ড করা
+        # যদি apktool.yml ফাইলটি না থাকে, তবে একটি বেসিক কনফিগারেশন ফাইল তৈরি করে নেওয়া
+        if [ ! -f "apktool.yml" ]; then
+          echo "version: 2.7.0" > apktool.yml
+          echo "apkFileName: bKash.apk" >> apktool.yml
+          echo "isFrameworkApk: false" >> apktool.yml
+          echo "sdkInfo:" >> apktool.yml
+          echo "  minSdkVersion: '24'" >> apktool.yml
+          echo "  targetSdkVersion: '34'" >> apktool.yml
+        fi
+
+        # এবার apktool দিয়ে বিল্ড করা
         apktool b . -o bKash-unsigned.apk
 
     - name: Upload Built APK Artifact
