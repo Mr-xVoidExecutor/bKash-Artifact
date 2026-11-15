@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    android:shape="rectangle"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid
+        android:color="@color/griver_audio_record_volume_bg" />
+    <corners
+        android:radius="14.0dip" />
+    <size
+        android:height="112.0dip"
+        android:width="112.0dip" />
+</shape>

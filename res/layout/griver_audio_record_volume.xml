@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_horizontal"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:id="@id/ll_root"
+    android:background="@drawable/griver_audio_record_bg"
+    android:layout_width="112.0dip"
+    android:layout_height="112.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="58.0dip"
+        android:layout_marginTop="17.0dip">
+        <ImageView
+            android:id="@id/iv_mic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/griver_audio_record_mic"
+            android:layout_marginEnd="6.0dip" />
+        <com.alibaba.griver.media.recorder.widget.RecordVolumeView
+            android:id="@id/rv_volume"
+            android:layout_width="18.0dip"
+            android:layout_height="30.0dip"
+            app:lineColor="@color/griver_audio_record_volume_normal"
+            app:lineHeight="2.0dip"
+            app:lineRadius="6.0dip"
+            app:maxLines="7"
+            app:startLineWidth="8.0dip" />
+    </LinearLayout>
+    <TextView
+        android:textSize="11.0sp"
+        android:textColor="@color/griver_core_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:text="@string/griver_audio_recording" />
+</LinearLayout>

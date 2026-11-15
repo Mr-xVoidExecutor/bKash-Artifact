@@ -1,0 +1,15 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Arrow">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM11.9697 9.03033C11.6768 8.73744 11.6768 8.26256 11.9697 7.96967C12.2626 7.67678 12.7374 7.67678 13.0303 7.96967L16.5303 11.4697C16.8232 11.7626 16.8232 12.2374 16.5303 12.5303L13.0303 16.0303C12.7374 16.3232 12.2626 16.3232 11.9697 16.0303C11.6768 15.7374 11.6768 15.2626 11.9697 14.9697L14.1893 12.75H8C7.58579 12.75 7.25 12.4142 7.25 12C7.25 11.5858 7.58579 11.25 8 11.25H14.1893L11.9697 9.03033Z" fill="url(#paint0_linear_0_19)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_19" x1="3.39919" y1="0.299998" x2="20.0256" y2="0.224607" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E2136E"/>
+<stop offset="0.15916" stop-color="#E03882" stop-opacity="0.796875"/>
+<stop offset="0.43163" stop-color="#E23913" stop-opacity="0.23084"/>
+<stop offset="0.505208" stop-color="#E2136E" stop-opacity="0.33"/>
+<stop offset="0.822917" stop-color="#FF0A7F" stop-opacity="0.82"/>
+<stop offset="1" stop-color="#FF510E"/>
+</linearGradient>
+</defs>
+</svg>

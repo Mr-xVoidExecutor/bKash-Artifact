@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/dialog_bg"
+    android:background="@drawable/griver_core_dialog_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:textSize="17.0sp"
+        android:textStyle="bold"
+        android:textColor="@color/griver_core_main_text_color"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@id/title"
+        android:paddingTop="10.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:maxLines="2"
+        android:paddingStart="20.0dip"
+        android:paddingEnd="20.0dip" />
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="@color/griver_core_sub_text_color"
+        android:gravity="center"
+        android:id="@id/message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:layout_below="@id/title"
+        android:paddingStart="20.0dip"
+        android:paddingEnd="20.0dip" />
+    <EditText
+        android:textSize="13.0sp"
+        android:textColorHint="@color/griver_core_edit_text_color"
+        android:ellipsize="end"
+        android:id="@id/inputContent"
+        android:background="@drawable/griver_core_au_bg_grey"
+        android:layout_width="fill_parent"
+        android:layout_height="32.0dip"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:layout_below="@id/message"
+        android:textCursorDrawable="@drawable/griver_core_edittext_cursor"
+        android:textAlignment="viewStart"
+        android:paddingStart="5.0dip"
+        android:paddingEnd="5.0dip"
+        android:layout_marginHorizontal="20.0dip" />
+    <View
+        android:id="@id/prompt_divider_1"
+        android:background="@color/griver_core_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_below="@id/inputContent" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/bottom_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="43.0dip"
+        android:layout_below="@id/prompt_divider_1">
+        <Button
+            android:textSize="17.0sp"
+            android:textColor="@color/griver_core_main_color"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:id="@id/cancel"
+            android:background="?android:selectableItemBackground"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:text="@string/griver_cancel"
+            android:singleLine="true"
+            android:layout_weight="1.0"
+            android:textAllCaps="false"
+            android:paddingStart="5.0dip"
+            android:paddingEnd="5.0dip" />
+        <View
+            android:id="@id/button_view_divider"
+            android:background="@color/griver_core_divider"
+            android:layout_width="0.5dip"
+            android:layout_height="fill_parent" />
+        <Button
+            android:textSize="17.0sp"
+            android:textColor="@color/griver_core_main_color"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:id="@id/ensure"
+            android:background="?android:selectableItemBackground"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:text="@string/griver_confirm"
+            android:singleLine="true"
+            android:layout_weight="1.0"
+            android:textAllCaps="false"
+            android:paddingStart="5.0dip"
+            android:paddingEnd="5.0dip" />
+    </LinearLayout>
+</RelativeLayout>

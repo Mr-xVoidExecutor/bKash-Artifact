@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/alertBox"
+    android:background="@drawable/acplugin_bg_alert_background"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:textSize="18.0sp"
+        android:textStyle="bold"
+        android:textColor="#ff1f324d"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginBottom="10.0dip"
+        android:text="This service is not supported"
+        android:layout_marginStart="20.0dip"
+        android:layout_marginEnd="20.0dip" />
+    <TextView
+        android:textSize="15.0sp"
+        android:textColor="#ff5d7494"
+        android:gravity="center"
+        android:id="@id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15.0dip"
+        android:text="Phone number authorization is currently not supported. Please use an alternative method to proceed."
+        android:lineSpacingExtra="2.0dip"
+        android:layout_marginStart="20.0dip"
+        android:layout_marginEnd="20.0dip" />
+    <RelativeLayout
+        android:background="@drawable/acplugin_bg_alert_confirm_top_border"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip">
+        <TextView
+            android:textSize="18.0sp"
+            android:textStyle="bold"
+            android:textColor="#ff1677ff"
+            android:gravity="center"
+            android:id="@id/button"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="I know" />
+    </RelativeLayout>
+</LinearLayout>

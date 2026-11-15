@@ -1,0 +1,25 @@
+.class public abstract LL/p$b;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = LL/p;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x409
+    name = "b"
+.end annotation
+
+
+# virtual methods
+.method public abstract a()Landroidx/concurrent/futures/c$a;
+.end method
+
+.method public abstract b()I
+.end method
+
+.method public abstract c()I
+.end method

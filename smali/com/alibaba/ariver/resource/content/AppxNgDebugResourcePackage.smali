@@ -1,0 +1,235 @@
+.class public Lcom/alibaba/ariver/resource/content/AppxNgDebugResourcePackage;
+.super Lcom/alibaba/ariver/resource/content/AppxNgResourcePackage;
+.source "SourceFile"
+
+
+# instance fields
+.field private appxProxyHost:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Lcom/alibaba/ariver/resource/api/ResourceContext;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/alibaba/ariver/resource/content/AppxNgResourcePackage;-><init>(Lcom/alibaba/ariver/resource/api/ResourceContext;)V
+
+    .line 2
+    .line 3
+    .line 4
+    const-string p1, ""
+
+    .line 5
+    .line 6
+    iput-object p1, p0, Lcom/alibaba/ariver/resource/content/AppxNgDebugResourcePackage;->appxProxyHost:Ljava/lang/String;
+
+    .line 7
+    .line 8
+    invoke-static {}, Lcom/alibaba/ariver/resource/content/ResourceUtils;->getAppxProxyHost()Ljava/lang/String;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object p1
+
+    .line 12
+    iput-object p1, p0, Lcom/alibaba/ariver/resource/content/AppxNgDebugResourcePackage;->appxProxyHost:Ljava/lang/String;
+
+    .line 13
+    .line 14
+    return-void
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+.end method
+
+.method public static synthetic access$000(Lcom/alibaba/ariver/resource/content/AppxNgDebugResourcePackage;)Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/alibaba/ariver/resource/content/AppxNgDebugResourcePackage;->appxProxyHost:Ljava/lang/String;
+
+    .line 2
+    .line 3
+    return-object p0
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+.end method
+
+
+# virtual methods
+.method public get(Lcom/alibaba/ariver/resource/api/content/ResourceQuery;)Lcom/alibaba/ariver/engine/api/resources/Resource;
+    .locals 3
+    .param p1    # Lcom/alibaba/ariver/resource/api/content/ResourceQuery;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p1, Lcom/alibaba/ariver/resource/api/content/ResourceQuery;->pureUrl:Ljava/lang/String;
+
+    .line 2
+    .line 3
+    const-string v1, "https://appx-ng/"
+
+    .line 4
+    .line 5
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    .line 6
+    .line 7
+    .line 8
+    move-result v0
+
+    .line 9
+    if-eqz v0, :cond_1
+
+    .line 10
+    .line 11
+    iget-object v0, p1, Lcom/alibaba/ariver/resource/api/content/ResourceQuery;->pureUrl:Ljava/lang/String;
+
+    .line 12
+    .line 13
+    iget-object v2, p0, Lcom/alibaba/ariver/resource/content/AppxNgDebugResourcePackage;->appxProxyHost:Ljava/lang/String;
+
+    .line 14
+    .line 15
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    .line 16
+    .line 17
+    .line 18
+    new-instance v0, Lcom/alibaba/ariver/resource/api/content/OnlineResource;
+
+    .line 19
+    .line 20
+    iget-object v1, p1, Lcom/alibaba/ariver/resource/api/content/ResourceQuery;->pureUrl:Ljava/lang/String;
+
+    .line 21
+    .line 22
+    const/4 v2, 0x0
+
+    .line 23
+    invoke-direct {v0, v1, v2}, Lcom/alibaba/ariver/resource/api/content/OnlineResource;-><init>(Ljava/lang/String;Lcom/alibaba/ariver/resource/api/content/NetworkStream$Listener;)V
+
+    .line 24
+    .line 25
+    .line 26
+    iget-object v1, p1, Lcom/alibaba/ariver/resource/api/content/ResourceQuery;->pureUrl:Ljava/lang/String;
+
+    .line 27
+    .line 28
+    const-string v2, "af-appx.min.js"
+
+    .line 29
+    .line 30
+    invoke-virtual {v1, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    .line 31
+    .line 32
+    .line 33
+    move-result v1
+
+    .line 34
+    if-eqz v1, :cond_0
+
+    .line 35
+    .line 36
+    new-instance v1, Lcom/alibaba/ariver/resource/content/AppxNgDebugResourcePackage$1;
+
+    .line 37
+    .line 38
+    invoke-direct {v1, p0}, Lcom/alibaba/ariver/resource/content/AppxNgDebugResourcePackage$1;-><init>(Lcom/alibaba/ariver/resource/content/AppxNgDebugResourcePackage;)V
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-static {v1}, Lcom/alibaba/ariver/kernel/common/utils/ExecutorUtils;->runOnMain(Ljava/lang/Runnable;)V
+
+    .line 42
+    .line 43
+    .line 44
+    :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 45
+    .line 46
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 47
+    .line 48
+    .line 49
+    const-string v2, "appx resource replace end :"
+
+    .line 50
+    .line 51
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 52
+    .line 53
+    .line 54
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 55
+    .line 56
+    .line 57
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 58
+    .line 59
+    .line 60
+    move-result-object p1
+
+    .line 61
+    const-string v1, "AppxNgDebugResourcePackage"
+
+    .line 62
+    .line 63
+    invoke-static {v1, p1}, Lcom/alibaba/ariver/kernel/common/utils/RVLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 64
+    .line 65
+    .line 66
+    return-object v0
+
+    .line 67
+    :cond_1
+    invoke-super {p0, p1}, Lcom/alibaba/ariver/resource/content/AppxNgResourcePackage;->get(Lcom/alibaba/ariver/resource/api/content/ResourceQuery;)Lcom/alibaba/ariver/engine/api/resources/Resource;
+
+    .line 68
+    .line 69
+    .line 70
+    move-result-object p1
+
+    .line 71
+    return-object p1
+    .line 72
+.end method
