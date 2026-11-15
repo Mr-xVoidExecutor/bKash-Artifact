@@ -3,8 +3,6 @@ name: Build and Release APK
 on:
   push:
     branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
   workflow_dispatch:
 
 jobs:
@@ -15,35 +13,23 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
 
-    - name: Set up JDK 17
+    - name: Set up Java
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Setup Android SDK
-      uses: android-actions/setup-android@v3
-      with:
-        accept-android-sdk-licenses: true
-        # নিচের লাইনগুলোর মাধ্যমে শুধু প্রয়োজনীয় আধুনিক কম্পোনেন্টগুলো ইনস্টল হবে, ফলে 'tools' প্যাকেজ খোঁজার এররটি আর আসবে না
-        packages: 'platforms;android-34 build-tools;34.0.0 platform-tools'
-
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-      continue-on-error: true
-
-    - name: Build with Gradle
+    - name: Install Apktool and Build APK
       run: |
-        if [ -f "gradlew" ]; then
-          ./gradlew assembleDebug
-        else
-          echo "Gradle wrapper not found, skipping gradle build."
-        fi
+        # Apktool ডাউনলোড এবং ইনস্টল করা
+        sudo apt-get update
+        sudo apt-get install -y apktool
 
-    - name: Upload Build Artifact
+        # বর্তমান ফোল্ডারের সোর্স দিয়ে APK বিল্ড করা
+        apktool b . -o bKash-unsigned.apk
+
+    - name: Upload Built APK Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: Generated-Outputs
-        path: |
-          **/build/outputs/apk/debug/*.apk
-          app/build/outputs/apk/debug/app-debug.apk
+        name: bKash-Unsigned-APK
+        path: bKash-unsigned.apk
